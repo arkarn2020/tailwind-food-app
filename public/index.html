@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>foodwala</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="text-gray-500 font-body flex justify-center">
+    <div class="grid md:grid-cols-3">
+      <!-- content wrapper -->
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <!-- navbar begin -->
+        <nav class="text-right">
+          <div class="flex justify-between items-center">
+            <h1 class="font-bold uppercase p-4 border-b border-gray-100">
+              <a href="/" class="hover:text-gray-700">foodwala</a>
+            </h1>
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+              <svg
+                class="w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+          </div>
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
+            <li class="text-gray-700 font-bold py-3">
+              <a
+                href="#"
+                class="px-4 flex justify-end border-r-8 border-primary"
+              >
+                <span>home</span>
+                <svg
+                  class="w-6 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="py-3">
+              <a href="#" class="px-4 flex justify-end border-r-8 border-white">
+                <span>about</span>
+                <svg
+                  class="w-6 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li class="py-3">
+              <a href="#" class="px-4 flex justify-end border-r-8 border-white">
+                <span>contact</span>
+                <svg
+                  class="w-6 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- navbar ends -->
+      </div>
+
+      <main class="px-16 py-6 bg-gray-100 md:col-span-2">
+        <div class="flex justify-center md:justify-end">
+          <a
+            href="#"
+            class="
+              btn
+              text-primary
+              border-primary
+              md:border-2
+              hover:bg-primary hover:text-white
+              transition
+              ease-out
+              duration-500
+            "
+          >
+            login
+          </a>
+          <a
+            href="#"
+            class="
+              btn
+              ml-2
+              text-primary
+              hover:bg-primary hover:text-white
+              border-primary
+              md:border-2
+              transition
+              ease-out
+              duration-500
+            "
+          >
+            signup
+          </a>
+        </div>
+
+        <header>
+          <h2 class="text-gray-700 text-4xl font-semi-bold">recipes</h2>
+          <h3 class="font-semi-bold text-lg">for foodies</h3>
+        </header>
+
+        <div>
+          <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">
+            latest recipes
+          </h4>
+
+          <div class="mt-8 grid lg:grid-cols-2 gap-10">
+            <!-- cards go here -->
+            <div class="card hover:shadow-xl">
+              <img src="img/stew.jpg" alt="stew" class="w-full h-32 sm:h-48" />
+              <div class="m-4">
+                <span class="font-bold">veg manchurian bbq</span>
+                <span class="block text-gray-500 text-sm">
+                  recipes by mario
+                </span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-6 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+            <!-- cards go here -->
+            <div class="card hover:shadow-xl">
+              <img
+                src="img/noodles.jpg"
+                alt="stew"
+                class="w-full h-32 sm:h-48"
+              />
+              <div class="m-4">
+                <span class="font-bold">veg thukpa</span>
+                <span class="block text-gray-500 text-sm">
+                  recipes by mario
+                </span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-6 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+            <!-- cards go here -->
+            <div class="card hover:shadow-xl">
+              <img src="img/curry.jpg" alt="stew" class="w-full h-32 sm:h-48" />
+              <div class="m-4">
+                <span class="font-bold">paneer 65</span>
+                <span class="block text-gray-500 text-sm">
+                  recipes by mario
+                </span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="w-6 inline-block"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="{2}"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span>25 mins</span>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">
+            most popular
+          </h4>
+
+          <div>
+            <!-- cards go here-->
+          </div>
+
+          <div class="flex justify-center">
+            <div
+              class="
+                btn
+                px-1
+                bg-secondary-100
+                text-secondary-200
+                hover:shadow-inner
+                transform
+                hover:scale-110 hover:bg-opacity-50
+                transition
+                ease-out
+                duration-300
+              "
+            >
+              load more
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
